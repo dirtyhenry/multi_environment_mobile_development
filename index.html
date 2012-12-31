@@ -68,6 +68,15 @@
 				</section>
 
 				<section>
+					<h2>Tablets</h2>
+					<p id="tablets_market" style="width: 900px; height: 350px;"></p>
+					<p>25% of adults American own a tablet</p>
+					<p>44% of Android tablets are Kindle Fire tablets</p>
+					<p>iPad share was 81% in 2011</p>
+					<p><small>October 2012 - Source: <a href="http://arstechnica.com/gadgets/2012/10/study-shows-25-of-americans-own-a-tablet/">ArsTechnica</a></small></p>
+				</section>
+
+				<section>
 					<h2>Weird...</h2>
 					<p>Tim Cook: <small>when comparing the tablet market share (iPad 68%) with the tablet web traffic share (iPad 91%)</small></p>
 					<blockquote>I don't know what these other tablets are doing</blockquote>
@@ -334,6 +343,12 @@
             ['large ldpi', 0.1],
           ]);
 
+          var tabletsMarket = google.visualization.arrayToDataTable([
+            ['OS', 'Share'],
+            ['iPad', 52],
+            ['Android', 48],
+          ]);
+
           var options = {
             backgroundColor: { fill:'transparent' },
             legend: { textStyle: { color: 'white'}}
@@ -347,6 +362,9 @@
           
           var androidScreensChart = new google.visualization.PieChart(document.getElementById('android_screens'));
           androidScreensChart.draw(androidScreens, options);
+
+          var tabletsChart = new google.visualization.PieChart(document.getElementById('tablets_market'));
+          tabletsChart.draw(tabletsMarket, options);
         }
       </script>
 	</body>
