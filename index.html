@@ -60,11 +60,19 @@
 					<p><small>Q3 2012 - Source: <a href="http://techcrunch.com/2012/11/02/idc-android-market-share-reached-75-worldwide-in-q3-2012/">IDC via TechCrunch</a></small></p>
 				</section>
 
-				<section>
-					<h2>Mobile Browsers</h2>
-					<div id="mobile_browser_market" style="width: 900px; height: 500px;"></div>
-					<p>Mobile browsing: 10% of global browsing</p>
-					<p><small>October 2012 - Source: <a href="http://arstechnica.com/information-technology/2012/11/firefox-dips-below-20-percent-chrome-falls-internet-explorer-gains/">ArsTechnica</a></small></p>
+        <section>
+  				<section>
+  					<h2>Mobile Browsers</h2>
+  					<div id="mobile_browser_market_december_2012" style="width: 900px; height: 500px;"></div>
+  					<p>Mobile browsing: 10% of global browsing</p>
+  					<p><small>December 2012 - Source: <a href="http://arstechnica.com/information-technology/2013/01/internet-explorer-ends-the-year-on-a-high-windows-8-slow-to-get-noticed/">ArsTechnica</a></small></p>
+  				</section>
+  				<section>
+  					<h2>Mobile Browsers</h2>
+  					<div id="mobile_browser_market_october_2012" style="width: 900px; height: 500px;"></div>
+  					<p>Mobile browsing: 10% of global browsing</p>
+  					<p><small>October 2012 - Source: <a href="http://arstechnica.com/information-technology/2012/11/firefox-dips-below-20-percent-chrome-falls-internet-explorer-gains/">ArsTechnica</a></small></p>
+  				</section>
 				</section>
 
 				<section>
@@ -327,13 +335,26 @@
             ['Linux', 1.5],
           ]);
 
-          var browserShares = google.visualization.arrayToDataTable([
+          var browserSharesOct12 = google.visualization.arrayToDataTable([
             ['OS', 'Share'],
             ['Safari Mobile', 60.31],
             ['Android Browser', 25.95],
             ['Opera Mini', 8.24],
             ['BlackBerry', 1.63],
             ['Others', 4.12],
+          ]);
+
+          var browserSharesDec12 = google.visualization.arrayToDataTable([
+            ['OS', 'Share'],
+            ['Safari Mobile', 60.56],
+            ['Android Browser', 22.10],
+            ['Opera Mini', 10.71],
+            ['Chrome', 1.48],
+            ['BlackBerry', 1.17],
+            ['Internet Explorer', 1.16],
+            ['Symbian', 0.77],
+            ['Opera Mobile', 0.62],
+            ['Others', 1.43],
           ]);
 
           var androidScreens = google.visualization.arrayToDataTable([
@@ -364,8 +385,11 @@
           var osMarketChart = new google.visualization.PieChart(document.getElementById('os_market'));
           osMarketChart.draw(osShares, options);
 
-          var browserMarketChart = new google.visualization.PieChart(document.getElementById('mobile_browser_market'));
-          browserMarketChart.draw(browserShares, options);
+          var browserMarketChartDec2012 = new google.visualization.PieChart(document.getElementById('mobile_browser_market_december_2012'));
+          browserMarketChartDec2012.draw(browserSharesDec12, options);
+          
+          var browserMarketChartOct2012 = new google.visualization.PieChart(document.getElementById('mobile_browser_market_october_2012'));
+          browserMarketChartOct2012.draw(browserSharesOct12, options);
           
           var androidScreensChart = new google.visualization.PieChart(document.getElementById('android_screens'));
           androidScreensChart.draw(androidScreens, options);
