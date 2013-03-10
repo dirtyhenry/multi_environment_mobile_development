@@ -63,6 +63,12 @@
         <section>
   				<section>
   					<h2>Mobile Browsers</h2>
+  					<div id="mobile_browser_market_march_2013" style="width: 900px; height: 500px;"></div>
+  					<p>Mobile browsing: 13% of global browsing</p>
+  					<p><small>March 2013 - Source: <a href="http://arstechnica.com/information-technology/2013/03/chrome-hits-17-month-low-windows-8-still-only-creeping-upward/">ArsTechnica</a></small></p>
+  				</section>
+  				<section>
+  					<h2>Mobile Browsers</h2>
   					<div id="mobile_browser_market_december_2012" style="width: 900px; height: 500px;"></div>
   					<p>Mobile browsing: 10% of global browsing</p>
   					<p><small>December 2012 - Source: <a href="http://arstechnica.com/information-technology/2013/01/internet-explorer-ends-the-year-on-a-high-windows-8-slow-to-get-noticed/">ArsTechnica</a></small></p>
@@ -371,6 +377,19 @@
             ['Others', 1.43],
           ]);
 
+          var browserSharesMar13 = google.visualization.arrayToDataTable([
+            ['OS', 'Share'],
+            ['Safari Mobile', 55.41],
+            ['Android Browser', 22.82],
+            ['Opera Mini', 12.72],
+            ['Chrome', 1.96],
+            ['BlackBerry', 0.96],
+            ['Internet Explorer', 1.58],
+            ['Symbian', 1.37],
+            ['Opera Mobile', 0.63],
+            ['Others', 2.55],
+          ]);
+
           var androidScreens = google.visualization.arrayToDataTable([
             ['OS', 'Share'],
             ['normal hdpi', 50.1],
@@ -399,6 +418,9 @@
           var osMarketChart = new google.visualization.PieChart(document.getElementById('os_market'));
           osMarketChart.draw(osShares, options);
 
+          var browserMarketChartMar2013 = new google.visualization.PieChart(document.getElementById('mobile_browser_market_march_2013'));
+          browserMarketChartMar2013.draw(browserSharesMar13, options);
+          
           var browserMarketChartDec2012 = new google.visualization.PieChart(document.getElementById('mobile_browser_market_december_2012'));
           browserMarketChartDec2012.draw(browserSharesDec12, options);
           
