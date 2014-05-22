@@ -7,6 +7,6 @@ I'm trying to maintain them since cause I felt it was a good reference to keep n
 
 Feel free to contribute or fork these slides for your own talks.
 
-These slides are available online here: [http://bootstragram.com/multi-environment-mobile-development][1]
+These slides are available online on [Bootstragram][1]
 
-[1]: http://bootstragram.com/multi-environment-mobile-development
+[1]: http://bootstragram.com/blog/multi-environment-mobile-development/
